@@ -37,8 +37,10 @@ describe('Testes do endpont /teams ', () => {
     expect(response.body).to.be.deep.equal(teams);  
    });
 
-  it('Seu sub-teste', () => {
-    expect(false).to.be.eq(true);
+  it('testando pelo id', async () => {
+    const response = chaiHttpResponse = await chai.request(app).get('/teams/1');
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.be.deep.equal(teams[0]);
   });
 });
 function before(arg0: () => Promise<void>) {
