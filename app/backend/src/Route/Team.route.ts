@@ -14,5 +14,9 @@ teamRoute.get(
   '/',
   (req: express.Request, res: express.Response) => teamController.findAll(req, res),
 );
+teamRoute.get(
+  '/:id',
+  (req: express.Request, res: express.Response) => teamController.findById(req, res),
+);
 
 export default teamRoute;
