@@ -19,5 +19,4 @@ EXPOSE 3001
 # Configurar os comandos para iniciar a aplicação de acordo com as boas práticas
 ENTRYPOINT ["npm", "run"]
 
-CMD [ "start" ]
 # Dica: Leia a seção Docker e Docker-compose no README para mais informações
