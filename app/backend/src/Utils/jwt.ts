@@ -18,3 +18,12 @@ export default function createTokenJWT(payload: JWTPayload) {
   const token = jwt.sign(payload, secret as string, config);
   return token;
 }
+export function decodeToken(token: string) {
+  try {
+    const decoded = jwt.verify(token, secret as string);
+    return decoded;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
+}
