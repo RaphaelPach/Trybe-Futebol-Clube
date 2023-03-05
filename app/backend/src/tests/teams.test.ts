@@ -4,12 +4,12 @@ import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 
 import { app } from '../app';
-/* import Example from '../database/models/ExampleModel'; */
+import Users from '../database/models/User';
 import Team from '../database/models/Team';
 
 import { Response } from 'superagent';
 import teams from './utils/teamMock';
-
+import loginMock from './utils/loginMock'
 
 chai.use(chaiHttp);
 
@@ -42,7 +42,23 @@ describe('Testes do endpont /teams ', () => {
     expect(response.status).to.be.equal(200);
     expect(response.body).to.be.deep.equal(teams[0]);
   });
+
+  it('testando a resposta de todos', async () => {
+    const response = chaiHttpResponse = await chai
+    .request(app)
+    .get('/role')
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.be.deep.equal(loginMock);  
+
+  })
 });
+
+
+
+
+
+
+
 function before(arg0: () => Promise<void>) {
   throw new Error('Function not implemented.');
 }

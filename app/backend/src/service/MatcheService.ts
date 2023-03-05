@@ -28,4 +28,8 @@ export default class MatcheService implements IMatcheService {
     this.modelService.update({ inProgress: false }, { where: { id } });
     return { message: 'Finished' };
   }
+
+  async updateGoals(id: number, homeTeamGoals: number, awayTeamGoals: number) {
+    await this.modelService.update({ homeTeamGoals, awayTeamGoals }, { where: { id } });
+  }
 }

@@ -21,4 +21,11 @@ matcheRouter.patch(
     tokenValidate(req, res, next),
   (req: express.Request, res: express.Response) => matcheController.updateMatches(req, res),
 );
+
+matcheRouter.patch(
+  '/:id',
+  (req: express.Request, res: express.Response, next: express.NextFunction) =>
+    tokenValidate(req, res, next),
+  (req: express.Request, res: express.Response) => matcheController.updateGoals(req, res),
+);
 export default matcheRouter;
