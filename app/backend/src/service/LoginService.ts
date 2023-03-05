@@ -24,7 +24,7 @@ export default class LoginService implements ILoginService {
 
     if (!compare) throw new CustomError('Invalid email or password', '401');
 
-    const token = jwt({ username: user.username, role: user.role, email: user.email });
+    const token = jwt({ username: user.username, role: user.role, email: user.email, id: user.id });
     return token;
   }
 

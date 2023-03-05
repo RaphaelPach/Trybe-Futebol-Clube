@@ -10,13 +10,12 @@ const users = [
   },
   {
     email: "@user.com",
-    id: 3,
+
     password: "secret_user",
 
   },
   {
     email: "invalid.user@user.com",
-    id: 4,
     password: "secret_user",
   },
 ]

@@ -2,7 +2,7 @@ import * as jwt from 'jsonwebtoken';
 
 const secret = process.env.JWT_SECRET;
 
-interface JWTPayload {
+export interface JWTPayload {
   id?: number;
   username: string;
   email?: string;
