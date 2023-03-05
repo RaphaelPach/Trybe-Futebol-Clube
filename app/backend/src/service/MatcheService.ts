@@ -23,4 +23,9 @@ export default class MatcheService implements IMatcheService {
 
     return matcheResult;
   }
+
+  async finished(id: number) {
+    this.modelService.update({ inProgress: false }, { where: { id } });
+    return { message: 'Finished' };
+  }
 }
