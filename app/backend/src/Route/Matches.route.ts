@@ -28,4 +28,12 @@ matcheRouter.patch(
     tokenValidate(req, res, next),
   (req: express.Request, res: express.Response) => matcheController.updateGoals(req, res),
 );
+
+matcheRouter.post(
+  '/',
+  (req: express.Request, res: express.Response, next: express.NextFunction) =>
+    tokenValidate(req, res, next),
+  (req: express.Request, res: express.Response) => matcheController.createMatche(req, res),
+);
+
 export default matcheRouter;

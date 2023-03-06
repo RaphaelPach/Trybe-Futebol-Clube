@@ -78,3 +78,11 @@ describe('Testes do endpoint /login ', () => {
 
 
 
+function after(arg0: () => void) {
+  throw new Error('Function not implemented.');
+}
+
+function before(arg0: () => Promise<void>) {
+  throw new Error('Function not implemented.');
+}
+
