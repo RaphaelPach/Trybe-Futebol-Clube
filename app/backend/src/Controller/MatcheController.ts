@@ -44,7 +44,6 @@ export default class MatchesController {
       homeTeamGoals,
       awayTeamGoals,
     );
-    console.log(result);
 
     return res.status(201).json(result);
   }
